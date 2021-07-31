@@ -16,12 +16,21 @@ curl \
 jq \
 git \
 nano \
-ruby \
+ruby-full \
 ruby-dev \
 python3 \
 python3-pip \
 software-properties-common && \
 rm -rf /var/lib/apt/lists/*
+
+RUN \
+set -x && \
+mkdir -p /tmp/kitchen-terraform && \
+cd /tmp/kitchen-terraform && \
+echo "source \"https://rubygems.org/\" do\n  gem \"kitchen-terraform\", \"~> 6.0\"\nend" > Gemfile && \
+gem install bundler && \
+bundle install && \
+rm -rf /tmp/kitchen-terraform
 
 RUN \
 set -x && \
