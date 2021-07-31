@@ -13,6 +13,7 @@ export TZ="Asia/Singapore" && \
 apt-get update && \
 apt-get install -y \
 curl \
+jq \
 git \
 nano \
 ruby \
