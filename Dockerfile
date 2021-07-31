@@ -17,6 +17,7 @@ jq \
 git \
 nano \
 ruby \
+ruby-dev \
 python3 \
 python3-pip \
 software-properties-common && \
